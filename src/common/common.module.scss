@@ -1,7 +1,10 @@
 .link li {
     cursor: pointer;
-    font-weight: 600;
-    letter-spacing: -0.5px !important;
+
+    & a {
+        font-weight: 600;
+        letter-spacing: -0.5px !important;
+    }
 
     &:hover {
         color: var(--primary);

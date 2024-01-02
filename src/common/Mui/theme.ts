@@ -1,4 +1,5 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
+import { DatePicker } from '@mui/x-date-pickers';
 
 export let theme = createTheme({
     typography: {
@@ -6,7 +7,7 @@ export let theme = createTheme({
     },
     palette: {
         primary: {
-            main: '#3aaeae',
+            main: '#023c2e',
         },
         secondary: {
             main: '#EBAE46;',
@@ -16,6 +17,7 @@ export let theme = createTheme({
             main: '#000',
         },
     },
+    components: {},
 });
 
 theme = responsiveFontSizes(theme);
