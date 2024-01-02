@@ -1,0 +1,12 @@
+.link li {
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: -0.5px !important;
+
+    &:hover {
+        color: var(--primary);
+        text-decoration: 2px underline var(--primary);
+        text-underline-offset: 5px;
+        transition: all ease 0.5s;
+    }
+}
