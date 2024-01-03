@@ -48,6 +48,10 @@ html *::-webkit-scrollbar {
     transition: all ease 0.5s;
 }
 
+input:focus {
+    outline: none;
+}
+
 @keyframes opacity {
     from {
         opacity: 0;
