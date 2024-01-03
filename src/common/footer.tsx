@@ -54,7 +54,7 @@ export default function Footer(props: IAppProps) {
                         },
                     }}
                 >
-                    TRANG GIỚI THIỆU
+                    ĐẶT CUỘC HẸN
                 </Button>
             </div>
             <hr

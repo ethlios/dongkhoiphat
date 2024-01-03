@@ -7,6 +7,7 @@ import styles from './common.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import logo from '../../public/img/logo.png';
+import { useEffect, useState } from 'react';
 
 const link = [
     {
@@ -42,6 +43,17 @@ export interface HeaderProps {}
 
 export default function Header(props: HeaderProps) {
     const path = usePathname();
+    const [scrollToTop, setScrollToTop] = useState<number>(0);
+
+    useEffect(() => {
+        const scroll = () => {
+            setScrollToTop(window.scrollY);
+        };
+
+        window.addEventListener('scroll', scroll);
+
+        return () => window.removeEventListener('scroll', scroll);
+    }, []);
 
     return (
         <div
@@ -52,12 +64,13 @@ export default function Header(props: HeaderProps) {
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                borderBottom: 'solid 1px rgba(0,0,0,0.2)',
                 padding: '0 50px',
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
                 backgroundColor: '#fff',
+                boxShadow: scrollToTop > 0 ? 'rgba(0, 0, 0, 0.2) 0px 5px 15px' : '',
+                transition: 'all ease .5s',
             }}
         >
             <div

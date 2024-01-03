@@ -5,6 +5,8 @@ import img1 from '../../../public/img/arron-choi-fYD54gVXFGM-unsplash.jpg';
 import img2 from '../../../public/img/old-factory-hall-with-equipment-machines-workers.jpg';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Appointment from '~/components/home/Appointment';
+import Content2 from '~/components/home/Body2';
+import HomeContent3 from '~/components/home/Body3';
 
 export default function Home() {
     return (
@@ -54,7 +56,7 @@ export default function Home() {
                     />
                     <p
                         style={{
-                            fontSize: '14.8px',
+                            fontSize: '15.6px',
                             padding: '0 ',
                             letterSpacing: '-.1px',
                         }}
@@ -169,7 +171,8 @@ export default function Home() {
                 </div>
                 <Appointment />
             </div>
-            <div>asd</div>
+            <Content2 />
+            <HomeContent3 />
         </main>
     );
 }
