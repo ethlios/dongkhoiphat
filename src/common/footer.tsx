@@ -1,19 +1,17 @@
 'use client';
 
-import Image from 'next/image';
-import * as React from 'react';
-import logoWhite from '../../public/img/logo white.png';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import CopyrightIcon from '@mui/icons-material/Copyright';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import { Button } from '@mui/material';
 import classNames from 'classnames/bind';
-import styles from './common.module.scss';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import CopyrightIcon from '@mui/icons-material/Copyright';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import ContactsIcon from '@mui/icons-material/Contacts';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-import MapIcon from '@mui/icons-material/Map';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import Image from 'next/image';
+import logoWhite from '../../public/img/logo white.png';
 import Zalo from '../../public/img/zalo.png';
+import styles from './common.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -91,7 +89,7 @@ export default function Footer(props: IAppProps) {
                         }}
                     >
                         <p style={{ fontSize: '14.5px' }}>
-                            <MapIcon
+                            <LocationOnIcon
                                 style={{
                                     fontSize: '18px',
                                 }}

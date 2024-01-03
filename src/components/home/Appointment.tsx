@@ -26,7 +26,7 @@ export default function Appointment(props: IAppProps) {
     return (
         <div
             style={{
-                width: '72%',
+                width: '74%',
                 minHeight: '180px',
                 marginTop: '40px',
                 borderBottom: 'solid 2px var(--secondary)',

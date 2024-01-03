@@ -53,7 +53,7 @@ export default function Header(props: HeaderProps) {
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 borderBottom: 'solid 1px rgba(0,0,0,0.2)',
-                padding: '0 30px',
+                padding: '0 50px',
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,

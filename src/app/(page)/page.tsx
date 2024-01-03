@@ -15,7 +15,7 @@ export default function Home() {
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-                    padding: '0 30px',
+                    padding: '0 50px',
                 }}
             >
                 <div
@@ -132,7 +132,7 @@ export default function Home() {
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
-                    padding: '0 30px',
+                    padding: '0 50px',
                     marginTop: '25px',
                     alignItems: 'center',
                 }}
@@ -169,6 +169,7 @@ export default function Home() {
                 </div>
                 <Appointment />
             </div>
+            <div>asd</div>
         </main>
     );
 }
