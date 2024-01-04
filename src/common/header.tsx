@@ -78,8 +78,8 @@ export default function Header(props: HeaderProps) {
                     backgroundImage: `url(${logo.src})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    width: '100px',
-                    height: '40px',
+                    width: '102px',
+                    height: '41px',
                 }}
                 draggable="false"
             ></div>
@@ -108,6 +108,8 @@ export default function Header(props: HeaderProps) {
                                     href={item.pathname}
                                     style={{
                                         color: path === item.pathname ? 'var(--primary)' : '',
+                                        textDecoration: path === item.pathname ? '2px underline' : '',
+                                        textUnderlineOffset: path === item.pathname ? '5px' : '',
                                     }}
                                 >
                                     {item.title}

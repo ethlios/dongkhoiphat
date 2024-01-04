@@ -125,3 +125,26 @@ input:focus {
 .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
     font-weight: 500 !important;
 }
+
+.css-10hyoxo-MuiStack-root span {
+    font-size: 12.7px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+progress {
+    /* accent-color: coral !important; */
+    border-radius: 10px;
+    height: 6px;
+    width: 100%;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--primary);
+}
+
+.css-r47a1p-MuiFormControl-root,
+.css-qwo8uq-MuiFormControl-root {
+    margin: 0px !important;
+}

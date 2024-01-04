@@ -1,0 +1,27 @@
+.link:hover {
+    text-decoration: 2px underline;
+    text-underline-offset: 4px;
+}
+
+.textarea {
+    border: solid 0.5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    resize: none;
+
+    &:hover {
+        border: solid 0.5px rgba(0, 0, 0, 0.8);
+    }
+
+    &:focus {
+        border: solid 2px rgba(0, 0, 0, 0.8);
+        outline: none;
+    }
+
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.55);
+    }
+}

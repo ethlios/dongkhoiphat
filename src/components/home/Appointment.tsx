@@ -70,8 +70,8 @@ export default function Appointment(props: IAppProps) {
                         onChange={(e: any) => setService(e.target.value)}
                     >
                         <MenuItem value={10}>Bốc vác</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
+                        <MenuItem value={20}>Chuyển nhà</MenuItem>
+                        <MenuItem value={30}>Cung ứng nhân lực</MenuItem>
                     </Select>
                 </FormControl>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>

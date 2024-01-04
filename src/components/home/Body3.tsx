@@ -1,21 +1,30 @@
 'use client';
 
-import React, { useState } from 'react';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import MoreIcon from '@mui/icons-material/More';
-import Tippy from '@tippyjs/react';
-import AddIcon from '@mui/icons-material/Add';
-import SpeedIcon from '@mui/icons-material/Speed';
-import 'tippy.js/dist/tippy.css';
-import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
 import EastIcon from '@mui/icons-material/East';
+import MoreIcon from '@mui/icons-material/More';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
+import Tippy from '@tippyjs/react';
+import { useState } from 'react';
 
 export interface IAppProps {}
 
 export default function HomeContent3(props: IAppProps) {
     const [addContent, setAddContent] = useState<boolean>(false);
+
+    // useEffect(() => {
+    //     if (addContent) {
+    //         setTimeout(() => {
+    //             setAddContent(false);
+    //         }, 4000);
+    //     } else {
+    //         setTimeout(() => {
+    //             setAddContent(true);
+    //         }, 4000);
+    //     }
+    // }, [addContent]);
 
     return (
         <div
@@ -50,7 +59,7 @@ export default function HomeContent3(props: IAppProps) {
                 {!addContent && (
                     <div
                         style={{
-                            backgroundColor: '#f1f2f1',
+                            backgroundColor: '#ededed',
                             borderRadius: '10px',
                             width: '100%',
                             height: '250px',
@@ -116,7 +125,7 @@ export default function HomeContent3(props: IAppProps) {
                 )}
                 <div
                     style={{
-                        backgroundColor: '#f1f2f1',
+                        backgroundColor: '#ededed',
                         borderRadius: '10px',
                         width: '100%',
                         height: '250px',
@@ -179,7 +188,7 @@ export default function HomeContent3(props: IAppProps) {
                 </div>
                 <div
                     style={{
-                        backgroundColor: '#f1f2f1',
+                        backgroundColor: '#ededed',
                         borderRadius: '10px',
                         width: '100%',
                         height: '250px',
@@ -243,7 +252,7 @@ export default function HomeContent3(props: IAppProps) {
                 {addContent && (
                     <div
                         style={{
-                            backgroundColor: '#f1f2f1',
+                            backgroundColor: '#ededed',
                             borderRadius: '10px',
                             width: '100%',
                             height: '250px',
