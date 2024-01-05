@@ -19,16 +19,20 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import classNames from 'classnames/bind';
 import dayjs from 'dayjs';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './lienhe.module.scss';
 
 const cx = classNames.bind(styles);
 
-export interface IFormContactProps {}
+export interface IFormContactProps {
+    setOpenCotent: any;
+    setData: any;
+    data: any;
+}
 
 const day = dayjs();
 
-export default function FormContact(props: IFormContactProps) {
+export default function FormContact({ setOpenCotent, setData, data }: IFormContactProps) {
     const [date, setDate] = useState<any>(day ?? '');
     const [time, setTime] = useState<any>(day ?? '');
     const [service, setService] = useState<any>('');
@@ -44,19 +48,39 @@ export default function FormContact(props: IFormContactProps) {
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
-        console.log({
-            data: {
-                date: date.format('DD/MM/YYYY'),
-                time: time.format('HH:mm A'),
-                service,
-                name,
-                email,
-                phone,
-                address,
-                message,
-            },
+        const data = {
+            date,
+            time,
+            service,
+            name,
+            email,
+            phone,
+            address,
+            message,
+        };
+
+        setData(data);
+        setOpenCotent(true);
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
         });
     };
+
+    useEffect(() => {
+        if (!!data) {
+            setDate(data.date);
+            setTime(data.time);
+            setService(data.service);
+            setName(data.name);
+            setEmail(data.email);
+            setPhone(data.phone);
+            setAddress(data.address);
+            setMessage(data.message);
+        }
+    }, [data]);
 
     const handleReset = () => {
         setDate(day);
@@ -67,6 +91,8 @@ export default function FormContact(props: IFormContactProps) {
         setPhone('');
         setAddress('');
         setMessage('');
+
+        setData('');
     };
 
     return (
@@ -226,11 +252,10 @@ export default function FormContact(props: IFormContactProps) {
                 >
                     <p
                         style={{
-                            fontSize: '12.7px',
-                            fontWeight: '500',
+                            fontSize: '15.5px',
+                            fontWeight: '600',
                             letterSpacing: '-.5px',
-                            color: 'rgba(0,0,0,0.5)',
-                            marginBottom: '10px',
+                            marginBottom: '17px',
                         }}
                     >
                         Thông tin cá nhân!
@@ -328,10 +353,9 @@ export default function FormContact(props: IFormContactProps) {
                     </div>
                     <p
                         style={{
-                            fontSize: '12.7px',
-                            fontWeight: '500',
+                            fontSize: '15.5px',
+                            fontWeight: '600',
                             letterSpacing: '-.5px',
-                            color: 'rgba(0,0,0,0.5)',
                             marginBottom: '10px',
                             marginTop: '30px',
                         }}
@@ -384,9 +408,9 @@ export default function FormContact(props: IFormContactProps) {
                                 onChange={(e: any) => setService(e.target.value)}
                                 required
                             >
-                                <MenuItem value={10}>Bốc vác</MenuItem>
-                                <MenuItem value={20}>Chuyển nhà</MenuItem>
-                                <MenuItem value={30}>Cung ứng nhân lực</MenuItem>
+                                <MenuItem value={'Bốc vác'}>Bốc vác</MenuItem>
+                                <MenuItem value={'Chuyển nhà'}>Chuyển nhà</MenuItem>
+                                <MenuItem value={'Cung ứng nhân lực'}>Cung ứng nhân lực</MenuItem>
                             </Select>
                         </FormControl>
                     </div>
@@ -427,6 +451,7 @@ export default function FormContact(props: IFormContactProps) {
                             setMessage(e.target.value);
                         }}
                         value={message}
+                        spellCheck={false}
                     />
                     <FormControlLabel
                         required

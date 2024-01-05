@@ -127,7 +127,7 @@ export default function Header(props: HeaderProps) {
                     gap: '8px',
                 }}
             >
-                <div
+                <Link
                     style={{
                         backgroundColor: 'var(--primary)',
                         padding: '4px 10px',
@@ -136,9 +136,10 @@ export default function Header(props: HeaderProps) {
                         scale: '.9',
                     }}
                     className="opacity"
+                    href="mailto:dongkhoiphat.co@gmail.com"
                 >
                     <MailOutlineIcon />
-                </div>
+                </Link>
                 <a
                     href="tel:0763299958"
                     style={{

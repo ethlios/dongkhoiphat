@@ -5,18 +5,26 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
+import { useState } from 'react';
 import envelope from '../../../../public/envelope.svg';
 import messe from '../../../../public/facebook-messenger.svg';
 import Zalo2 from '../../../../public/img/zalo.png';
 import Zalo from '../../../../public/img/zalo2.png';
+import Check from './check';
 import FormContact from './form';
 import styles from './lienhe.module.scss';
+import Link from 'next/link';
+import MyMap from './map';
 
 const cx = classNames.bind(styles);
 
 export interface IAppProps {}
 
 export default function Contact(props: IAppProps) {
+    const [openContent, setOpenContent] = useState<boolean>(false);
+    const [data, setData] = useState<any>();
+    const [openMap, setOpenMap] = useState<boolean>(false);
+
     return (
         <main className="cpmount">
             <div
@@ -29,6 +37,7 @@ export default function Contact(props: IAppProps) {
                     marginBottom: '30px',
                 }}
             >
+                {openMap && <MyMap setOpenMap={setOpenMap} />}
                 <div
                     style={{
                         backgroundColor: '#ededed',
@@ -65,7 +74,8 @@ export default function Contact(props: IAppProps) {
                         >
                             Rất mong bạn sẽ liên hệ với chúng tôi. Chúng tôi sẽ phản hồi nhanh nhất có thể!
                         </p>
-                        <div
+                        <Link
+                            href={'zalo://conversation?phone=0763299958'}
                             style={{
                                 display: 'flex',
                                 alignItems: 'center',
@@ -85,7 +95,7 @@ export default function Contact(props: IAppProps) {
                             >
                                 Nhắn tin với Zalo.
                             </p>
-                        </div>
+                        </Link>
                         <div
                             style={{
                                 display: 'flex',
@@ -108,7 +118,7 @@ export default function Contact(props: IAppProps) {
                             </p>
                         </div>
 
-                        <div
+                        <Link
                             style={{
                                 display: 'flex',
                                 alignItems: 'center',
@@ -117,6 +127,7 @@ export default function Contact(props: IAppProps) {
                                 cursor: 'pointer',
                             }}
                             className={cx('link')}
+                            href="mailto:dongkhoiphat.co@gmail.com"
                         >
                             <Image src={envelope.src} alt="dkp zalo" width={17} height={17} />
                             <p
@@ -128,7 +139,7 @@ export default function Contact(props: IAppProps) {
                             >
                                 Gửi mail bằng Gmail.
                             </p>
-                        </div>
+                        </Link>
                     </div>
                     <div>
                         <p
@@ -151,7 +162,7 @@ export default function Contact(props: IAppProps) {
                         >
                             Chúng tôi nhận cuộc gọi 24/7, miễn phí tư vấn!
                         </p>
-                        <div
+                        <Link
                             style={{
                                 display: 'flex',
                                 alignItems: 'center',
@@ -160,6 +171,7 @@ export default function Contact(props: IAppProps) {
                                 cursor: 'pointer',
                             }}
                             className={cx('link')}
+                            href="tel:0763299958"
                         >
                             <PhoneInTalkIcon
                                 style={{
@@ -176,7 +188,7 @@ export default function Contact(props: IAppProps) {
                             >
                                 + 076 32999 58
                             </p>
-                        </div>
+                        </Link>
                     </div>
                     <div>
                         <p
@@ -208,6 +220,7 @@ export default function Contact(props: IAppProps) {
                                 cursor: 'pointer',
                             }}
                             className={cx('link')}
+                            onClick={() => setOpenMap(true)}
                         >
                             <LocationOnIcon
                                 style={{
@@ -235,21 +248,27 @@ export default function Contact(props: IAppProps) {
                             }}
                         >
                             <FacebookIcon style={{ fontSize: '40px' }} className="opacity" />
-                            <Image
-                                src={Zalo2.src}
-                                alt="dkp zalo"
-                                width={40}
-                                height={40}
-                                style={{
-                                    scale: '.77',
-                                    filter: 'brightness(0)',
-                                }}
-                                className="opacity"
-                            />
+                            <Link href={'zalo://conversation?phone=0763299958'}>
+                                <Image
+                                    src={Zalo2.src}
+                                    alt="dkp zalo"
+                                    width={40}
+                                    height={40}
+                                    style={{
+                                        scale: '.77',
+                                        filter: 'brightness(0)',
+                                    }}
+                                    className="opacity"
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>
-                <FormContact />
+                {!openContent ? (
+                    <FormContact setOpenCotent={setOpenContent} setData={setData} data={data} />
+                ) : (
+                    <Check data={data} setOpenCotent={setOpenContent} setData={setData} />
+                )}
             </div>
         </main>
     );
