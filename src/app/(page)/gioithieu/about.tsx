@@ -187,7 +187,7 @@ export default function AboutContent(props: IAppProps) {
                         Việt Nam.
                         <br />
                         <br />
-                        <b
+                        {/* <b
                             style={{
                                 fontSize: '46.5px',
                                 float: 'left',
@@ -198,8 +198,8 @@ export default function AboutContent(props: IAppProps) {
                             }}
                         >
                             Đ
-                        </b>
-                        ồng Khởi Phát cam kết dành toàn bộ tâm huyết, sức trẻ, sự sáng tạo và kinh nghiệm vốn
+                        </b> */}
+                        Đồng Khởi Phát cam kết dành toàn bộ tâm huyết, sức trẻ, sự sáng tạo và kinh nghiệm vốn
                         có của mình để mang tới cho các doanh nghiệp những nhân lực chất lượng, có chuyên môn
                         cao, năng lực tốt.
                     </p>
@@ -241,7 +241,7 @@ export default function AboutContent(props: IAppProps) {
                         chúng tôi cam kết cung cấp cho khách hàng dịch vụ Nhân sự chất lượng nhất Việt Nam.
                         <br />
                         <br />
-                        <b
+                        {/* <b
                             style={{
                                 fontSize: '46.5px',
                                 float: 'left',
@@ -252,13 +252,13 @@ export default function AboutContent(props: IAppProps) {
                             }}
                         >
                             C
-                        </b>
-                        huyên nghiệp: Chúng tôi vận hành dịch vụ theo quy trình chuẩn hóa, với đội ngũ nhân sự
-                        được tuyển chọn và đào tạo bài bản, áp dụng nền tảng công nghệ trong công tác quản
+                        </b> */}
+                        Chuyên nghiệp: Chúng tôi vận hành dịch vụ theo quy trình chuẩn hóa, với đội ngũ nhân
+                        sự được tuyển chọn và đào tạo bài bản, áp dụng nền tảng công nghệ trong công tác quản
                         trị, chúng tôi muốn khách hàng thực sự hài lòng khi sử dụng dịch vụ của chúng tôi.
                         <br />
                         <br />
-                        <b
+                        {/* <b
                             style={{
                                 fontSize: '46.5px',
                                 float: 'left',
@@ -269,10 +269,10 @@ export default function AboutContent(props: IAppProps) {
                             }}
                         >
                             H
-                        </b>
-                        iệu quả: Khi sử dụng dịch vụ nhân sự của Đồng Khởi Phát, khách hàng sẽ có thời gian để
-                        tập trung vào việc phát triển sản xuất kinh doanh, tất cả các vấn đề về nhân sự chúng
-                        tôi sẽ chịu trách nhiệm từ đó mang lại giá trị gia tăng cho khách hàng.
+                        </b> */}
+                        Hiệu quả: Khi sử dụng dịch vụ nhân sự của Đồng Khởi Phát, khách hàng sẽ có thời gian
+                        để tập trung vào việc phát triển sản xuất kinh doanh, tất cả các vấn đề về nhân sự
+                        chúng tôi sẽ chịu trách nhiệm từ đó mang lại giá trị gia tăng cho khách hàng.
                         <br />
                     </p>
                 </div>
@@ -352,7 +352,7 @@ export default function AboutContent(props: IAppProps) {
                         các khách hàng cũng như doanh nghiệp.
                         <br />
                         <br />
-                        <b
+                        {/* <b
                             style={{
                                 fontSize: '46.5px',
                                 float: 'left',
@@ -363,8 +363,8 @@ export default function AboutContent(props: IAppProps) {
                             }}
                         >
                             L
-                        </b>
-                        ấy đam mê nhiệt huyết làm nguồn sức mạnh, và lấy nụ cười của khách hàng làm mục tiêu
+                        </b> */}
+                        Lấy đam mê nhiệt huyết làm nguồn sức mạnh, và lấy nụ cười của khách hàng làm mục tiêu
                         theo đuổi, Đồng Khởi Phát đã và đang không ngừng hoàn thiện bản thân cho hiện tại và
                         tương lai.
                     </p>
@@ -408,7 +408,7 @@ export default function AboutContent(props: IAppProps) {
                         đẹp nhất tới cho người lao động .
                         <br />
                         <br />
-                        <b
+                        {/* <b
                             style={{
                                 fontSize: '46.5px',
                                 float: 'left',
@@ -419,8 +419,8 @@ export default function AboutContent(props: IAppProps) {
                             }}
                         >
                             C
-                        </b>
-                        húng tôi lắng nghe, phân tích và thấu hiểu nhu cầu của từng người lao động từ đó áp
+                        </b> */}
+                        Chúng tôi lắng nghe, phân tích và thấu hiểu nhu cầu của từng người lao động từ đó áp
                         dụng kinh nghiệm, kỹ năng, tư duy của mình để giải quyết tối ưu những nhu cầu đó, giúp
                         chủ doanh nghiệp có được những người lao động có kỹ năng và chăm chỉ , người lao động
                         có được công việc tốt và ổn định . Mỗi khách hàng là một viên gạch xây lên giá trị của

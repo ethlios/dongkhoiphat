@@ -180,7 +180,7 @@ export default function About(props: IAppProps) {
                                 paddingLeft: '10px',
                             }}
                         >
-                            Sự thành công chúng tôi phụ thuộc vào sự tin tưởng của Khách hàng và Đối tác.
+                            Sự thành công của chúng tôi phụ thuộc vào sự tin tưởng của Khách hàng và Đối tác.
                         </b>
                     </p>
                     <AboutContent />

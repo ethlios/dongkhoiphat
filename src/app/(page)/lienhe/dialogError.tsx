@@ -2,49 +2,13 @@ import React, { useEffect } from 'react';
 import sendEmailImg from '../../../../public/img/Asset 1.png';
 import Image from 'next/image';
 import { Button } from '@mui/material';
-import html2canvas from 'html2canvas';
-import logo from '../../../../public/img/logo.png';
 
 export interface IAppProps {
     setOpenCotent: any;
     setData: any;
-    item: any;
 }
 
-export default function DialogSuccess({ setOpenCotent, setData, item }: IAppProps) {
-    const handleDowloadImg = () => {
-        item.style.padding = '30px';
-        item.childNodes[7].style.display = 'none';
-        item.childNodes[0].style.display = 'flex';
-        // item.childNodes[0].style.width = '100px';
-        // item.childNodes[0].style.height = '40px';
-
-        const svg = document.querySelectorAll('p');
-
-        for (let i = 0; i < svg.length; i++) {
-            svg[i].style.position = 'relative';
-            svg[i].style.bottom = '7px';
-        }
-
-        html2canvas(item).then((canvas) => {
-            const base64image = canvas.toDataURL('image/pdf');
-            let anchor = document.createElement('a');
-            anchor.setAttribute('href', base64image);
-            anchor.setAttribute('download', 'thong-tin.pdf');
-            anchor.click();
-            anchor.remove();
-        });
-
-        item.style.padding = '0px';
-        item.childNodes[7].style.display = 'flex';
-        item.childNodes[0].style.display = 'none';
-
-        for (let i = 0; i < svg.length; i++) {
-            svg[i].style.position = 'static';
-            svg[i].style.bottom = '0';
-        }
-    };
-
+export default function DialogError({ setOpenCotent, setData }: IAppProps) {
     return (
         <div
             style={{
@@ -83,7 +47,7 @@ export default function DialogSuccess({ setOpenCotent, setData, item }: IAppProp
                         marginTop: '20px',
                     }}
                 >
-                    Yêu cầu của bạn đã được gửi thành công!
+                    Yêu cầu của bạn chưa được gửi thành công!
                 </p>
                 <p
                     style={{
@@ -95,8 +59,8 @@ export default function DialogSuccess({ setOpenCotent, setData, item }: IAppProp
                         marginTop: '5px',
                     }}
                 >
-                    Chúng tôi đã tiếp nhận yêu cầu của bạn. Chúng tôi sẽ gấp rút liên lạc lại với bạn ngay khi
-                    có thể. Nếu có sự thay đổi hãy gọi ngay đến số{' '}
+                    Lỗi được phát sinh từ một vài sự cố nào đó, có thể là trục trặc bên phía máy chủ. Xin vui
+                    lòng thử lại sau. Nếu có sự bất tiện nào hãy gọi ngay đến số{' '}
                     <a
                         href="tel:0763299958"
                         style={{
@@ -111,24 +75,12 @@ export default function DialogSuccess({ setOpenCotent, setData, item }: IAppProp
                     style={{
                         display: 'flex',
                         flexDirection: 'row',
-                        justifyContent: 'space-between',
+                        justifyContent: 'center',
                         marginTop: '15px',
                         gap: '20px',
                         width: '100%',
                     }}
                 >
-                    <Button
-                        variant="outlined"
-                        style={{
-                            fontSize: '14px',
-                            fontWeight: '600',
-                            border: '2px solid',
-                            width: '50%',
-                        }}
-                        onClick={handleDowloadImg}
-                    >
-                        In thông tin cuộc hẹn
-                    </Button>
                     <Button
                         variant="contained"
                         style={{

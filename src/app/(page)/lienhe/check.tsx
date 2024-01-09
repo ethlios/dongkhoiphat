@@ -13,6 +13,7 @@ import emailjs from '@emailjs/browser';
 import DialogSuccess from './dialogSuccess';
 import logo from '../../../../public/img/logo.png';
 import Image from 'next/image';
+import DialogError from './dialogError';
 
 export interface IAppProps {
     data: any;
@@ -23,15 +24,18 @@ export interface IAppProps {
 export default function Check({ setOpenCotent, data, setData }: IAppProps) {
     const formRef = useRef<any>();
     const [sendEmailSuccess, setSendEmailSuccess] = useState<boolean>(false);
+    const [sendEmailError, setSendEmailError] = useState<boolean>(false);
     const mainRef = useRef<any>();
 
     const handleSubmit = () => {
         emailjs.sendForm('service_pbfmz7e', 'template_eecmczn', formRef.current, 'q03ZrSYKH_SFOODZt').then(
             (result) => {
                 setSendEmailSuccess(true);
+                setSendEmailError(false);
             },
             (error) => {
                 setSendEmailSuccess(false);
+                setSendEmailError(true);
             },
         );
 
@@ -56,6 +60,7 @@ export default function Check({ setOpenCotent, data, setData }: IAppProps) {
             {sendEmailSuccess && (
                 <DialogSuccess setData={setData} setOpenCotent={setOpenCotent} item={mainRef.current} />
             )}
+            {sendEmailError && <DialogError setData={setData} setOpenCotent={setOpenCotent} />}
             <div
                 style={{
                     display: 'flex',
