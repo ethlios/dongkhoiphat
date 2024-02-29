@@ -109,7 +109,7 @@ export default function Home() {
                         className="opacity"
                     >
                         <Link
-                            href={'/dichvu'}
+                            href={'/'}
                             style={{
                                 fontWeight: '600',
                             }}
