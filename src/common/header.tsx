@@ -20,16 +20,16 @@ const link = [
         title: 'Giới thiệu',
         pathname: '/gioithieu',
     },
-    {
-        id: 3,
-        title: 'Dịch vụ',
-        pathname: '/dichvu',
-    },
-    {
-        id: 4,
-        title: 'Tin tức',
-        pathname: '/tintuc',
-    },
+    // {
+    //     id: 3,
+    //     title: 'Dịch vụ',
+    //     pathname: '/dichvu',
+    // },
+    // {
+    //     id: 4,
+    //     title: 'Tin tức',
+    //     pathname: '/tintuc',
+    // },
     {
         id: 5,
         title: 'Liên hệ',
